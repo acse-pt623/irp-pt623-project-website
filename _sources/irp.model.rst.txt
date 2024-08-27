@@ -1,0 +1,77 @@
+irp.model package
+=================
+
+Submodules
+----------
+
+irp.model.Attention\_module module
+----------------------------------
+
+.. automodule:: irp.model.Attention_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+irp.model.BNN\_module module
+----------------------------
+
+.. automodule:: irp.model.BNN_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+irp.model.CNN\_LSTM\_module module
+----------------------------------
+
+.. automodule:: irp.model.CNN_LSTM_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+irp.model.HybirdModel\_module module
+------------------------------------
+
+.. automodule:: irp.model.HybirdModel_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+irp.model.ScalerpipelineModel\_module module
+--------------------------------------------
+
+.. automodule:: irp.model.ScalerpipelineModel_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+irp.model.Simple\_LSTM\_module module
+-------------------------------------
+
+.. automodule:: irp.model.Simple_LSTM_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+irp.model.TCN\_LSTM\_module module
+----------------------------------
+
+.. automodule:: irp.model.TCN_LSTM_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+irp.model.TCN\_module module
+----------------------------
+
+.. automodule:: irp.model.TCN_module
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: irp.model
+   :members:
+   :undoc-members:
+   :show-inheritance:

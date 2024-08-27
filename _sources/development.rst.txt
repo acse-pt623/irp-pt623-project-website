@@ -1,0 +1,69 @@
+Development
+=============
+
+This section outlines the guidelines and procedures for contributing to the `irp-pt623` project within our organization. Since this project is proprietary, please ensure you follow the company's internal policies and procedures.
+
+## Development Workflow
+
+1. **Request Access**:
+   - Ensure you have the necessary permissions and access to the repository. If you require access, please contact the project manager or your team lead.
+
+2. **Set Up Your Development Environment**:
+   - Clone the repository from the internal Git server:
+
+     ```bash
+     $ git clone https://github.com/acse-pt623/irp-pt623-external.git
+     $ cd irp-pt623-externel
+     ```
+
+   - Create and activate the Conda environment as described in the [Installation](#installation) section.
+
+3. **Create a New Branch**:
+   - Before making changes, create a new branch based on the task or feature you are working on:
+
+     ```bash
+     $ git checkout -b feature/my-new-feature
+     ```
+
+   - Use descriptive branch names that follow the company's naming conventions (e.g., `feature/`, `bugfix/`, `hotfix/`).
+
+4. **Implement Changes**:
+   - Make your changes in the codebase. Ensure that all changes are consistent with the project's coding standards and include appropriate comments and docstrings.
+
+5. **Testing**:
+   - Write and run tests to verify that your changes do not introduce any issues:
+
+     ```bash
+     $ pytest
+     ```
+
+   - Ensure that all tests pass before proceeding.
+
+6. **Code Review**:
+   - Commit your changes and push the branch to the internal Git server:
+   
+     ```bash
+     $ git add .
+     $ git commit -m "Implement feature: description of the feature"
+     $ git push origin feature/my-new-feature
+     ```
+
+   - Create a merge request (MR) or pull request (PR) on the internal Git platform and assign it to the relevant reviewer.
+   - The reviewer will assess your changes and provide feedback. Make necessary revisions as requested.
+
+7. **Merging Changes**:
+   - Once the MR/PR is approved, follow the internal procedures for merging your changes into the main branch. This might involve automated checks, additional approvals, or other steps as required by the company's policies.
+
+8. **Documentation**:
+   - Update the project documentation, if necessary, to reflect your changes. This includes updating docstrings, README files, or any other relevant documentation.
+
+9. **Deployment**:
+   - Coordinate with the deployment team to ensure your changes are deployed to the relevant environments (e.g., staging, production).
+
+## Additional Guidelines
+
+- **Confidentiality**: All code, documentation, and related materials are proprietary and should be treated as confidential. Do not share any project details outside the company.
+- **Version Control**: Ensure that all changes are properly tracked in the version control system and that branch management aligns with the company's version control practices.
+- **Security**: Adhere to best practices for secure coding and data handling. If you encounter any potential security issues, report them immediately to the security team.
+
+For detailed information on the development process, please refer to the company's internal development guidelines document.

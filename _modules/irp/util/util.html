@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>irp.util.util &#8212; irp-pt623 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/alabaster.css?v=12dfc556" />
+    <script src="../../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <h1>Source code for irp.util.util</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">Dataset</span>
+
+<div class="viewcode-block" id="ensure_directory_exists">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.ensure_directory_exists">[docs]</a>
+<span class="k">def</span> <span class="nf">ensure_directory_exists</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Ensures that a directory exists. If it does not exist, the directory is created.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        directory (str): The path of the directory to check/create.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">directory</span><span class="p">):</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">directory</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="MAE">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.MAE">[docs]</a>
+<span class="k">def</span> <span class="nf">MAE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the Mean Absolute Error (MAE) between predictions and true values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pred (np.ndarray): The predicted values.</span>
+<span class="sd">        true (np.ndarray): The true values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The MAE value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">pred</span> <span class="o">-</span> <span class="n">true</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="MSE">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.MSE">[docs]</a>
+<span class="k">def</span> <span class="nf">MSE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the Mean Squared Error (MSE) between predictions and true values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pred (np.ndarray): The predicted values.</span>
+<span class="sd">        true (np.ndarray): The true values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The MSE value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">pred</span> <span class="o">-</span> <span class="n">true</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="RMSE">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.RMSE">[docs]</a>
+<span class="k">def</span> <span class="nf">RMSE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the Root Mean Squared Error (RMSE) between predictions and true values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pred (np.ndarray): The predicted values.</span>
+<span class="sd">        true (np.ndarray): The true values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The RMSE value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">MSE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="MAPE">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.MAPE">[docs]</a>
+<span class="k">def</span> <span class="nf">MAPE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the Mean Absolute Percentage Error (MAPE) between predictions and true values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pred (np.ndarray): The predicted values.</span>
+<span class="sd">        true (np.ndarray): The true values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The MAPE value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">((</span><span class="n">pred</span> <span class="o">-</span> <span class="n">true</span><span class="p">)</span> <span class="o">/</span> <span class="n">true</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="MSPE">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.MSPE">[docs]</a>
+<span class="k">def</span> <span class="nf">MSPE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the Mean Squared Percentage Error (MSPE) between predictions and true values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pred (np.ndarray): The predicted values.</span>
+<span class="sd">        true (np.ndarray): The true values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        float: The MSPE value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">((</span><span class="n">pred</span> <span class="o">-</span> <span class="n">true</span><span class="p">)</span> <span class="o">/</span> <span class="n">true</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="metric">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.metric">[docs]</a>
+<span class="k">def</span> <span class="nf">metric</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates various evaluation metrics for model performance.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        pred (np.ndarray): The predicted values.</span>
+<span class="sd">        true (np.ndarray): The true values.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: A tuple containing the MAE, MSE, RMSE, MAPE, MSPE, and R2 score.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">mae</span> <span class="o">=</span> <span class="n">MAE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">)</span>
+    <span class="n">mse</span> <span class="o">=</span> <span class="n">MSE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">)</span>
+    <span class="n">rmse</span> <span class="o">=</span> <span class="n">RMSE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">)</span>
+    <span class="n">mape</span> <span class="o">=</span> <span class="n">MAPE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">)</span>
+    <span class="n">mspe</span> <span class="o">=</span> <span class="n">MSPE</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">)</span>
+    <span class="n">r2</span> <span class="o">=</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">pred</span><span class="p">,</span> <span class="n">true</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">mae</span><span class="p">,</span> <span class="n">mse</span><span class="p">,</span> <span class="n">rmse</span><span class="p">,</span> <span class="n">mape</span><span class="p">,</span> <span class="n">mspe</span></div>
+
+
+<div class="viewcode-block" id="check_columns">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.check_columns">[docs]</a>
+<span class="k">def</span> <span class="nf">check_columns</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">required_cols</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if the required columns are present in the DataFrame.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (pd.DataFrame): The DataFrame to check.</span>
+<span class="sd">        required_cols (list): List of required columns. Defaults to a standard list of commodity columns.</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        ValueError: If any of the required columns are missing.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">required_cols</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">required_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Copper&#39;</span><span class="p">,</span> <span class="s1">&#39;Crb&#39;</span><span class="p">,</span> <span class="s1">&#39;Gold&#39;</span><span class="p">,</span> <span class="s1">&#39;LME_Index&#39;</span><span class="p">,</span> <span class="s1">&#39;Oil_Brent&#39;</span><span class="p">,</span> <span class="s1">&#39;Soybean&#39;</span><span class="p">,</span> <span class="s1">&#39;Tin&#39;</span><span class="p">,</span> <span class="s1">&#39;Wheat&#39;</span><span class="p">,</span> <span class="s1">&#39;Silver&#39;</span><span class="p">]</span>
+        
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">all</span><span class="p">(</span><span class="n">col</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">required_cols</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Missing columns. Required columns: </span><span class="si">{</span><span class="n">required_cols</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="preprocess_data">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.preprocess_data">[docs]</a>
+<span class="k">def</span> <span class="nf">preprocess_data</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">required_cols</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Copper&#39;</span><span class="p">,</span> <span class="s1">&#39;Crb&#39;</span><span class="p">,</span> <span class="s1">&#39;Gold&#39;</span><span class="p">,</span> <span class="s1">&#39;LME_Index&#39;</span><span class="p">,</span> <span class="s1">&#39;Oil_Brent&#39;</span><span class="p">,</span> <span class="s1">&#39;Soybean&#39;</span><span class="p">,</span> <span class="s1">&#39;Tin&#39;</span><span class="p">,</span> <span class="s1">&#39;Wheat&#39;</span><span class="p">,</span> <span class="s1">&#39;Silver&#39;</span><span class="p">]):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Loads and preprocesses the data from a CSV file. Ensures required columns are present and drops rows with missing values.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_path (str): The path to the CSV file.</span>
+<span class="sd">        required_cols (list): List of required columns. Defaults to a standard list of commodity columns.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        pd.DataFrame: The preprocessed DataFrame.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">])</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+    <span class="n">check_columns</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">required_cols</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">required_cols</span><span class="p">]</span>    
+    <span class="k">return</span> <span class="n">data</span></div>
+
+
+<div class="viewcode-block" id="SlidingWindowDataset">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.SlidingWindowDataset">[docs]</a>
+<span class="k">class</span> <span class="nc">SlidingWindowDataset</span><span class="p">(</span><span class="n">Dataset</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A custom PyTorch Dataset that generates sliding window samples from time series data.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (np.ndarray): The time series data as a NumPy array or Pandas DataFrame.</span>
+<span class="sd">        input_window (int): The number of time steps to use as input.</span>
+<span class="sd">        pred_window (int): The number of time steps to predict.</span>
+
+<span class="sd">    Example:</span>
+<span class="sd">        dataset = SlidingWindowDataset(data, input_window=30, pred_window=1)</span>
+<span class="sd">        loader = DataLoader(dataset, batch_size=32, shuffle=True)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="SlidingWindowDataset.__init__">
+<a class="viewcode-back" href="../../../irp.util.html#irp.util.util.SlidingWindowDataset.__init__">[docs]</a>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">input_window</span><span class="p">,</span> <span class="n">pred_window</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">input_window</span> <span class="o">=</span> <span class="n">input_window</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pred_window</span> <span class="o">=</span> <span class="n">pred_window</span></div>
+
+
+    <span class="k">def</span> <span class="fm">__len__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the number of samples in the dataset.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Number of samples.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_window</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">pred_window</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idx</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves a sample from the dataset.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            idx (int): Index of the sample to retrieve.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple: A tuple containing the input sequence and target sequence as PyTorch tensors.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">idx</span><span class="p">:</span><span class="n">idx</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_window</span><span class="p">]</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">idx</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_window</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">pred_window</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span><span class="n">idx</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">input_window</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">pred_window</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">torch</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span></div>
+
+</pre></div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../../index.html">irp-pt623</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../development.html">Development</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../index.html">Module code</a><ul>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Peifeng Tan.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

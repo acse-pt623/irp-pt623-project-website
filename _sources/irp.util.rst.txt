@@ -1,0 +1,21 @@
+irp.util package
+================
+
+Submodules
+----------
+
+irp.util.util module
+--------------------
+
+.. automodule:: irp.util.util
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: irp.util
+   :members:
+   :undoc-members:
+   :show-inheritance:

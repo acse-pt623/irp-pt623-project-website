@@ -1,0 +1,9 @@
+API Reference
+=============
+
+This section provides detailed information about the classes, methods, and functions available in the irp-pt623 package. The following descriptions are automatically generated from the docstrings within your source code.
+
+.. toctree::
+   :maxdepth: 4
+
+   irp

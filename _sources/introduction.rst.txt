@@ -1,0 +1,16 @@
+Introduction
+============
+
+The irp-pt623-externel package is a core component of a project focused on predicting copper prices using advanced machine learning techniques. This package provides the essential models and data processing tools necessary for building and evaluating time series forecasting models tailored for copper price prediction.
+
+Key Features:
+
+- **Model Definitions**: Implements advanced machine learning models, including **BNN-CNN-LSTM** and **Multi-TCN-LSTM-Attention**, designed to capture complex temporal dependencies in time series data.
+
+- **Data Processing Utilities**: Includes tools for preprocessing data, such as feature scaling and windowing, which are critical for preparing input data for model training and evaluation.
+
+- **Scalable Pipeline**: Provides a pipeline approach that combines data scaling and model prediction, simplifying the deployment of models with consistent data preprocessing steps.
+
+- **Evaluation Metrics**: Offers a suite of evaluation functions, such as MSE, MAE, MAPE, and R², to assess model performance comprehensively.
+
+This package is designed to be integrated into the broader workflow of the copper price prediction project, supporting both model development and deployment.

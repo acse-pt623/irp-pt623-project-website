@@ -1,0 +1,33 @@
+Installation
+============
+
+To set up the environment for this project, follow these steps:
+
+1. **Clone the repository**:
+
+   ```bash
+   $ git clone https://github.com/acse-pt623/irp-pt623-external.git
+   ```
+2. **Navigate to the project directory**:
+
+   ```bash
+   $ cd irp-pt623-externel
+   ```
+3. **Create and activate the Conda environment**:
+
+   ```bash
+   $ conda env create -f environment.yml
+   $ conda activate copper-price-prediction
+   ```
+4. **Install dependencies**:
+
+   ```bash
+   $ pip install -r requirements.txt
+   ```
+5. **Prepare the data**:
+
+   Prepare your input data as a `.csv` file. Ensure that it contains the following columns in this exact order: `['Copper', 'Crb', 'Gold', 'LME_Index', 'Oil_Brent', 'Soybean', 'Tin', 'Wheat', 'Silver']`.
+   Save this file in the `Data` directory. You can use preprocess_data function to load data.
+   ```python
+   dataa = preprocess_data(save_path)
+   ```

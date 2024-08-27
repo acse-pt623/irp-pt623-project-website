@@ -1,0 +1,19 @@
+irp package
+===========
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   irp.model
+   irp.util
+
+Module contents
+---------------
+
+.. automodule:: irp
+   :members:
+   :undoc-members:
+   :show-inheritance:

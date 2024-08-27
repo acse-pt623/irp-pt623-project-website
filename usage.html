@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Usage &#8212; irp-pt623 0.1.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="./_static/pygments.css?v=d1102ebc" />
-    <link rel="stylesheet" type="text/css" href="./_static/alabaster.css?v=12dfc556" />
-    <script src="./_static/documentation_options.js?v=01f34227"></script>
-    <script src="./_static/doctools.js?v=9a2dae69"></script>
-    <script src="./_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Reference" href="api_reference.html" />
     <link rel="prev" title="Installation" href="installation.html" />
    
-  <link rel="stylesheet" href="./_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
 
   
@@ -43,10 +43,10 @@
 - Format your input data as a <cite>.csv</cite> file. The file should contain the following columns in the exact order: <cite>[‘Copper’, ‘Crb’, ‘Gold’, ‘LME_Index’, ‘Oil_Brent’, ‘Soybean’, ‘Tin’, ‘Wheat’, ‘Silver’]</cite>.
 - Use the <cite>preprocess_data</cite> function to load and preprocess this data:</p>
 <blockquote>
-<div><p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
-from irp.util import preprocess_data</p>
-<p>data = preprocess_data(‘Data/cleaned_data.csv’)
-<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">from</span> <span class="pre">irp.util</span> <span class="pre">import</span> <span class="pre">preprocess_data</span>
+<span class="pre">data</span> <span class="pre">=</span> <span class="pre">preprocess_data('Data/cleaned_data.csv')</span>
+<span class="pre">`</span></code></p>
 </div></blockquote>
 </li>
 </ol>
@@ -67,11 +67,11 @@ from irp.util import preprocess_data</p>
 <li><p><strong>Load a Pre-Trained Model</strong>:
 - Load a pre-trained model from the <cite>result_model</cite> directory:</p>
 <blockquote>
-<div><p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>python
-import torch</p>
-<p>model = torch.load(‘result_model/ConvLSTM_BNNModel_model_14input_5day.pth’)
-model.eval()
-<a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<div><p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">import</span> <span class="pre">torch</span>
+<span class="pre">model</span> <span class="pre">=</span> <span class="pre">torch.load('result_model/ConvLSTM_BNNModel_model_14input_5day.pth')</span>
+<span class="pre">model.eval()</span>
+<span class="pre">`</span></code></p>
 </div></blockquote>
 </li>
 </ol>
@@ -88,7 +88,7 @@ model.eval()
 <li><p><strong>Prepare Scaled Input Data</strong>:
 - Load and scale the input data using the saved feature and label scalers:</p>
 <blockquote>
-<div><p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>python
+<div><p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
 import joblib
 import torch
 import pandas as pd</p>
@@ -97,7 +97,7 @@ feature_scaler = joblib.load(‘result_model/features_scaler.pkl’)
 label_scaler = joblib.load(‘result_model/label_scaler.pkl’)</p>
 <p>x_input = torch.tensor(feature_scaler.transform(data.values), dtype=torch.float).unsqueeze(0)
 x_input = x_input.to(model.device)
-<a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
 </div></blockquote>
 </li>
 <li><p><strong>Make Predictions</strong>:
@@ -203,7 +203,7 @@ x_input = x_input.to(model.device)
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
       |
-      <a href="./_sources/usage.rst.txt"
+      <a href="_sources/usage.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

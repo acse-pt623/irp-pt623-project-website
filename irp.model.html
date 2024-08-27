@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>irp.model package &#8212; irp-pt623 0.1.0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="./_static/pygments.css?v=d1102ebc" />
-    <link rel="stylesheet" type="text/css" href="./_static/alabaster.css?v=12dfc556" />
-    <script src="./_static/documentation_options.js?v=01f34227"></script>
-    <script src="./_static/doctools.js?v=9a2dae69"></script>
-    <script src="./_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=01f34227"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="irp.util package" href="irp.util.html" />
     <link rel="prev" title="irp package" href="irp.html" />
    
-  <link rel="stylesheet" href="./_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
 
   
@@ -41,7 +41,7 @@
 <span id="irp-model-attention-module-module"></span><h2>irp.model.Attention_module module<a class="headerlink" href="#module-irp.model.Attention_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.Attention_module.MultiHeadSelfAttention">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Attention_module.</span></span><span class="sig-name descname"><span class="pre">MultiHeadSelfAttention</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#MultiHeadSelfAttention"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.MultiHeadSelfAttention" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Attention_module.</span></span><span class="sig-name descname"><span class="pre">MultiHeadSelfAttention</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#MultiHeadSelfAttention"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.MultiHeadSelfAttention" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>Multi-Head Self Attention Module</p>
 <dl class="field-list simple">
@@ -112,7 +112,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Attention_module.MultiHeadSelfAttention.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#MultiHeadSelfAttention.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.MultiHeadSelfAttention.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#MultiHeadSelfAttention.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.MultiHeadSelfAttention.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -357,7 +357,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Attention_module.MultiHeadSelfAttention.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#MultiHeadSelfAttention.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.MultiHeadSelfAttention.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#MultiHeadSelfAttention.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.MultiHeadSelfAttention.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass for the Multi-Head Self Attention.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1375,7 +1375,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.Attention_module.TransformerEncoder">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Attention_module.</span></span><span class="sig-name descname"><span class="pre">TransformerEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#TransformerEncoder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoder" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Attention_module.</span></span><span class="sig-name descname"><span class="pre">TransformerEncoder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#TransformerEncoder"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoder" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>Transformer Encoder Module</p>
 <p>This module stacks multiple TransformerEncoderLayer modules to form a Transformer encoder.</p>
@@ -1438,7 +1438,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Attention_module.TransformerEncoder.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#TransformerEncoder.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoder.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#TransformerEncoder.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoder.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -1683,7 +1683,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Attention_module.TransformerEncoder.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#TransformerEncoder.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoder.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#TransformerEncoder.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoder.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass for the Transformer Encoder.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -2701,7 +2701,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.Attention_module.TransformerEncoderLayer">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Attention_module.</span></span><span class="sig-name descname"><span class="pre">TransformerEncoderLayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#TransformerEncoderLayer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoderLayer" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Attention_module.</span></span><span class="sig-name descname"><span class="pre">TransformerEncoderLayer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#TransformerEncoderLayer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoderLayer" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>Single Transformer Encoder Layer</p>
 <p>This module consists of a multi-head self-attention mechanism followed by a feed-forward network.</p>
@@ -2774,7 +2774,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Attention_module.TransformerEncoderLayer.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#TransformerEncoderLayer.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoderLayer.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">embed_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_heads</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forward_expansion</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#TransformerEncoderLayer.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoderLayer.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -3019,7 +3019,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Attention_module.TransformerEncoderLayer.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Attention_module.html#TransformerEncoderLayer.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoderLayer.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Attention_module.html#TransformerEncoderLayer.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Attention_module.TransformerEncoderLayer.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass for the Transformer Encoder Layer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -4040,7 +4040,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <span id="irp-model-bnn-module-module"></span><h2>irp.model.BNN_module module<a class="headerlink" href="#module-irp.model.BNN_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.BNN_module.ConvLSTM_BNNModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.BNN_module.</span></span><span class="sig-name descname"><span class="pre">ConvLSTM_BNNModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conv_out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/BNN_module.html#ConvLSTM_BNNModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.ConvLSTM_BNNModel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.BNN_module.</span></span><span class="sig-name descname"><span class="pre">ConvLSTM_BNNModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conv_out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/BNN_module.html#ConvLSTM_BNNModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.ConvLSTM_BNNModel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>Convolutional LSTM Model with Bayesian Neural Network layers.</p>
 <p>This model combines a series of 1D convolutional layers with an LSTM, followed by
@@ -4071,7 +4071,7 @@ with uncertainty quantification provided by the Bayesian layers.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.BNN_module.ConvLSTM_BNNModel.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conv_out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/BNN_module.html#ConvLSTM_BNNModel.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.ConvLSTM_BNNModel.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conv_out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lstm_num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/BNN_module.html#ConvLSTM_BNNModel.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.ConvLSTM_BNNModel.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -4316,7 +4316,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.BNN_module.ConvLSTM_BNNModel.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/BNN_module.html#ConvLSTM_BNNModel.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.ConvLSTM_BNNModel.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/BNN_module.html#ConvLSTM_BNNModel.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.ConvLSTM_BNNModel.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the ConvLSTM_BNNModel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -5334,7 +5334,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.BNN_module.LSTM_BNNModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.BNN_module.</span></span><span class="sig-name descname"><span class="pre">LSTM_BNNModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/BNN_module.html#LSTM_BNNModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.LSTM_BNNModel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.BNN_module.</span></span><span class="sig-name descname"><span class="pre">LSTM_BNNModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/BNN_module.html#LSTM_BNNModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.LSTM_BNNModel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>LSTM Model with Bayesian Neural Network layers.</p>
 <p>This model uses an LSTM to process sequential data, followed by Bayesian
@@ -5363,7 +5363,7 @@ fully connected layers for time series prediction with uncertainty quantificatio
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.BNN_module.LSTM_BNNModel.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/BNN_module.html#LSTM_BNNModel.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.LSTM_BNNModel.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hidden_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_layers</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/BNN_module.html#LSTM_BNNModel.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.LSTM_BNNModel.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -5608,7 +5608,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.BNN_module.LSTM_BNNModel.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/BNN_module.html#LSTM_BNNModel.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.LSTM_BNNModel.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/BNN_module.html#LSTM_BNNModel.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.BNN_module.LSTM_BNNModel.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the LSTM_BNNModel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -6629,7 +6629,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <span id="irp-model-cnn-lstm-module-module"></span><h2>irp.model.CNN_LSTM_module module<a class="headerlink" href="#module-irp.model.CNN_LSTM_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.CNN_LSTM_module.CNN_LSTM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.CNN_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">CNN_LSTM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/CNN_LSTM_module.html#CNN_LSTM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.CNN_LSTM_module.CNN_LSTM" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.CNN_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">CNN_LSTM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/CNN_LSTM_module.html#CNN_LSTM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.CNN_LSTM_module.CNN_LSTM" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>Convolutional Neural Network (CNN) combined with Long Short-Term Memory (LSTM) Network.</p>
 <p>This model applies a series of 1D convolutional layers to each feature in the input data,
@@ -6663,7 +6663,7 @@ to produce the final output. It’s designed for time series prediction tasks.</
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.CNN_LSTM_module.CNN_LSTM.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/CNN_LSTM_module.html#CNN_LSTM.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.CNN_LSTM_module.CNN_LSTM.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/CNN_LSTM_module.html#CNN_LSTM.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.CNN_LSTM_module.CNN_LSTM.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -6908,7 +6908,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.CNN_LSTM_module.CNN_LSTM.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/CNN_LSTM_module.html#CNN_LSTM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.CNN_LSTM_module.CNN_LSTM.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/CNN_LSTM_module.html#CNN_LSTM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.CNN_LSTM_module.CNN_LSTM.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the CNN-LSTM model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -7929,7 +7929,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <span id="irp-model-hybirdmodel-module-module"></span><h2>irp.model.HybirdModel_module module<a class="headerlink" href="#module-irp.model.HybirdModel_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.HybirdModel_module.HybridModel">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.HybirdModel_module.</span></span><span class="sig-name descname"><span class="pre">HybridModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/HybirdModel_module.html#HybridModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.HybirdModel_module.HybridModel" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.HybirdModel_module.</span></span><span class="sig-name descname"><span class="pre">HybridModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/HybirdModel_module.html#HybridModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.HybirdModel_module.HybridModel" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>A hybrid model combining TCN-LSTM cores with a Transformer encoder for multivariate time series forecasting.</p>
 <p>The model first applies a set of Temporal Convolutional Network (TCN) and Long Short-Term Memory (LSTM) networks
@@ -7963,7 +7963,7 @@ to capture dependencies across different features. The final output is produced 
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.HybirdModel_module.HybridModel.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/HybirdModel_module.html#HybridModel.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.HybirdModel_module.HybridModel.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/HybirdModel_module.html#HybridModel.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.HybirdModel_module.HybridModel.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -8208,7 +8208,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.HybirdModel_module.HybridModel.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/HybirdModel_module.html#HybridModel.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.HybirdModel_module.HybridModel.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/HybirdModel_module.html#HybridModel.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.HybirdModel_module.HybridModel.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the hybrid model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -9229,7 +9229,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <span id="irp-model-scalerpipelinemodel-module-module"></span><h2>irp.model.ScalerpipelineModel_module module<a class="headerlink" href="#module-irp.model.ScalerpipelineModel_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.ScalerpipelineModel_module.ScalerModelPipeline">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.ScalerpipelineModel_module.</span></span><span class="sig-name descname"><span class="pre">ScalerModelPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_scaler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_scaler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/ScalerpipelineModel_module.html#ScalerModelPipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.ScalerpipelineModel_module.ScalerModelPipeline" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.ScalerpipelineModel_module.</span></span><span class="sig-name descname"><span class="pre">ScalerModelPipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_scaler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_scaler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/ScalerpipelineModel_module.html#ScalerModelPipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.ScalerpipelineModel_module.ScalerModelPipeline" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>A pipeline that integrates feature scaling and label inverse scaling into a PyTorch model.</p>
 <p>This class wraps around a pre-trained PyTorch model and ensures that input data is scaled
@@ -9261,7 +9261,7 @@ the output is inverse scaled using a provided label scaler to return predictions
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.ScalerpipelineModel_module.ScalerModelPipeline.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_scaler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_scaler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/ScalerpipelineModel_module.html#ScalerModelPipeline.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.ScalerpipelineModel_module.ScalerModelPipeline.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_scaler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_scaler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/ScalerpipelineModel_module.html#ScalerModelPipeline.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.ScalerpipelineModel_module.ScalerModelPipeline.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -9506,7 +9506,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.ScalerpipelineModel_module.ScalerModelPipeline.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/ScalerpipelineModel_module.html#ScalerModelPipeline.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.ScalerpipelineModel_module.ScalerModelPipeline.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/ScalerpipelineModel_module.html#ScalerModelPipeline.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.ScalerpipelineModel_module.ScalerModelPipeline.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the model with integrated scaling.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -10527,7 +10527,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <span id="irp-model-simple-lstm-module-module"></span><h2>irp.model.Simple_LSTM_module module<a class="headerlink" href="#module-irp.model.Simple_LSTM_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.Simple_LSTM_module.LSTM_">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Simple_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">LSTM_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Simple_LSTM_module.html#LSTM_"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Simple_LSTM_module.LSTM_" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.Simple_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">LSTM_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Simple_LSTM_module.html#LSTM_"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Simple_LSTM_module.LSTM_" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>A simple LSTM-based neural network model.</p>
 <p>This model consists of an LSTM layer followed by a fully connected neural network.
@@ -10565,7 +10565,7 @@ layers are used to produce the final output.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Simple_LSTM_module.LSTM_.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Simple_LSTM_module.html#LSTM_.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Simple_LSTM_module.LSTM_.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Simple_LSTM_module.html#LSTM_.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Simple_LSTM_module.LSTM_.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -10810,7 +10810,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.Simple_LSTM_module.LSTM_.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/Simple_LSTM_module.html#LSTM_.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Simple_LSTM_module.LSTM_.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/Simple_LSTM_module.html#LSTM_.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.Simple_LSTM_module.LSTM_.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Defines the forward pass of the model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -11831,7 +11831,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <span id="irp-model-tcn-lstm-module-module"></span><h2>irp.model.TCN_LSTM_module module<a class="headerlink" href="#module-irp.model.TCN_LSTM_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.TCN_LSTM_module.TCN_LSTM">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">TCN_LSTM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">TCN_LSTM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>A model that combines a Temporal Convolutional Network (TCN) with an LSTM layer and a fully connected network.</p>
 <p>This model applies a TCN to the input sequence to extract temporal features,
@@ -11873,7 +11873,7 @@ followed by fully connected layers to generate the final output.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_LSTM_module.TCN_LSTM.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -12118,7 +12118,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_LSTM_module.TCN_LSTM.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the TCN-LSTM model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -13136,7 +13136,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.TCN_LSTM_module.TCN_LSTM_core">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">TCN_LSTM_core</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM_core"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM_core" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_LSTM_module.</span></span><span class="sig-name descname"><span class="pre">TCN_LSTM_core</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM_core"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM_core" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>A core model that combines a Temporal Convolutional Network (TCN) with an LSTM layer.</p>
 <p>This model first applies a TCN to the input sequence to extract temporal features,
@@ -13177,7 +13177,7 @@ followed by an LSTM layer to capture long-term dependencies in the data.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_LSTM_module.TCN_LSTM_core.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM_core.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM_core.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM_core.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM_core.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -13422,7 +13422,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_LSTM_module.TCN_LSTM_core.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM_core.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM_core.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_LSTM_module.html#TCN_LSTM_core.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_LSTM_module.TCN_LSTM_core.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the TCN-LSTM core model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -14443,7 +14443,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 <span id="irp-model-tcn-module-module"></span><h2>irp.model.TCN_module module<a class="headerlink" href="#module-irp.model.TCN_module" title="Link to this heading">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.TCN_module.ResidualBlock">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_module.</span></span><span class="sig-name descname"><span class="pre">ResidualBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dilation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'relu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_module.html#ResidualBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.ResidualBlock" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_module.</span></span><span class="sig-name descname"><span class="pre">ResidualBlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dilation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'relu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_module.html#ResidualBlock"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.ResidualBlock" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>Residual Block for Temporal Convolutional Network (TCN).</p>
 <p>This block applies two convolutional layers with dilation, followed by dropout and an optional channel matching
@@ -14474,7 +14474,7 @@ operation to ensure the output has the same number of channels as the input, all
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_module.ResidualBlock.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dilation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'relu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_module.html#ResidualBlock.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.ResidualBlock.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">out_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dilation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">activation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'relu'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_module.html#ResidualBlock.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.ResidualBlock.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -14719,7 +14719,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_module.ResidualBlock.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_module.html#ResidualBlock.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.ResidualBlock.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_module.html#ResidualBlock.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.ResidualBlock.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the ResidualBlock.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -15737,7 +15737,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
 
 <dl class="py class">
 <dt class="sig sig-object py" id="irp.model.TCN_module.TCN">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_module.</span></span><span class="sig-name descname"><span class="pre">TCN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_module.html#TCN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.TCN" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">irp.model.TCN_module.</span></span><span class="sig-name descname"><span class="pre">TCN</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_module.html#TCN"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.TCN" title="Link to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></p>
 <p>Temporal Convolutional Network (TCN) model.</p>
 <p>The TCN model consists of multiple layers of residual blocks, where each block applies a sequence of dilated
@@ -15766,7 +15766,7 @@ convolutions to capture long-range dependencies in sequential data.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_module.TCN.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_module.html#TCN.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.TCN.__init__" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_channels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dropout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_module.html#TCN.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.TCN.__init__" title="Link to this definition">¶</a></dt>
 <dd><p>Initialize internal Module state, shared by both nn.Module and ScriptModule.</p>
 </dd></dl>
 
@@ -16011,7 +16011,7 @@ strings are acceptable.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="irp.model.TCN_module.TCN.forward">
-<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="./_modules/irp/model/TCN_module.html#TCN.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.TCN.forward" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">forward</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/irp/model/TCN_module.html#TCN.forward"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#irp.model.TCN_module.TCN.forward" title="Link to this definition">¶</a></dt>
 <dd><p>Forward pass through the TCN.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -17105,7 +17105,7 @@ See <code class="xref py py-meth docutils literal notranslate"><span class="pre"
       &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
       
       |
-      <a href="./_sources/irp.model.rst.txt"
+      <a href="_sources/irp.model.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

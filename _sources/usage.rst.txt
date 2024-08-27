@@ -1,0 +1,93 @@
+Usage
+=====
+
+This section provides step-by-step instructions on how to use the models and utilities provided by the `irp-pt623` package for predicting copper prices.
+
+Data Preparation
+----------------
+
+Before making predictions, you need to prepare your input data:
+
+1. **Prepare Input Data**:
+   - Format your input data as a `.csv` file. The file should contain the following columns in the exact order: `['Copper', 'Crb', 'Gold', 'LME_Index', 'Oil_Brent', 'Soybean', 'Tin', 'Wheat', 'Silver']`.
+   - Use the `preprocess_data` function to load and preprocess this data:
+   
+     ```python
+     from irp.util import preprocess_data
+     data = preprocess_data('Data/cleaned_data.csv')
+     ```
+
+Model Loading
+-------------
+
+To load and use the provided models:
+
+1. **Import Models**:
+   - Import the necessary models and utilities from the `irp` package:
+   
+     ```python
+     from irp.model import LSTM_BNNModel, ConvLSTM_BNNModel, HybridModel, LSTM_, TCN_LSTM, TCN_LSTM_core, TCN, ResidualBlock, CNN_LSTM, TransformerEncoderLayer, TransformerEncoder, MultiHeadSelfAttention, ScalerModelPipeline
+     from irp.util import SlidingWindowDataset, preprocess_data
+     ```
+
+2. **Load a Pre-Trained Model**:
+   - Load a pre-trained model from the `result_model` directory:
+   
+     ```python
+     import torch
+     model = torch.load('result_model/ConvLSTM_BNNModel_model_14input_5day.pth')
+     model.eval()
+     ```
+
+Prediction
+----------
+
+There are two main ways to make predictions depending on whether your model includes a scaling pipeline.
+
+.. note::
+   
+   When using the `Multi-TCN-LSTM-Attention` model, please ensure that the output is inverse transformed using the `feature_scaler`. This step is crucial for maintaining the accuracy of the predictions.
+
+### Using Model without Scalers
+
+1. **Prepare Scaled Input Data**:
+   - Load and scale the input data using the saved feature and label scalers:
+   
+     ```python
+     import joblib
+     import torch
+     import pandas as pd
+
+     data = pd.read_csv('Data/cleaned_data.csv', index_col='date')
+     feature_scaler = joblib.load('result_model/features_scaler.pkl')
+     label_scaler = joblib.load('result_model/label_scaler.pkl')
+
+     x_input = torch.tensor(feature_scaler.transform(data.values), dtype=torch.float).unsqueeze(0)
+     x_input = x_input.to(model.device)
+     ```
+
+2. **Make Predictions**:
+   - Pass the input data through the model to generate predictions:
+   
+     ```python
+     y_pred = model(x_input).cpu().detach().numpy()
+     y = label_scaler.inverse_transform(y_pred)
+     ```
+
+### Using Model with Scalers
+
+1. **Prepare Raw Input Data**:
+   - Directly load the input data without manually scaling:
+   
+     ```python
+     data = pd.read_csv('Data/cleaned_data.csv', index_col='date')
+     ```
+
+2. **Make Predictions with Scaled Model Pipeline**:
+   - If you are using a model that includes the scaling process, you can predict directly:
+   
+     ```python
+     y = model_pipeline(data.values)
+     ```
+
+This guide should help you set up, load, and utilize the models provided by the `irp-pt623` package to predict copper prices.
